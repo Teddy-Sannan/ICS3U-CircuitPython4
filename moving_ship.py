@@ -24,7 +24,7 @@ def main():
     alien = stage.Sprite(image_bank_1, 9, 64, 56)
     sprites.append(alien)
     ship = stage.Sprite(image_bank_1, 5, 74, 56)
-    sprites.insert(0, ship) # insert at the top of sprite list
+    sprites.insert(0, ship)  # insert at the top of sprite list
 
     # create a stage for the background to show up
     # setting the frame rate to 60fps
@@ -38,19 +38,14 @@ def main():
     while True:
         # get user input
         keys = ugame.buttons.get_pressed()
-        #print(keys)
 
         if keys & ugame.K_X:
-            #print("A")
             pass
         if keys & ugame.K_O:
-            #print("B")
             pass
         if keys & ugame.K_START:
-            #print("K_START")
             pass
         if keys & ugame.K_SELECT:
-            #print("K_SELECT")
             pass
         if keys & ugame.K_RIGHT:
             ship.move(ship.x + 1, ship.y)
@@ -69,7 +64,7 @@ def main():
 
         # redraw sprite list
         game.render_sprites(sprites)
-        game.tick() # wait until refresh rate finishes
+        game.tick()  # wait until refresh rate finishes
 
 
 if __name__ == "__main__":
